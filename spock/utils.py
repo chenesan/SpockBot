@@ -124,5 +124,9 @@ def mapshort2id(data):
 def ByteToHex(byteStr):
 	return ''.join( [ "%02X " % x for x in byteStr ] ).strip()
 
+# this cast is for such case:
+# x,y,z=(-111.5,66,99)
+# in minecraft this point is inside the block(-112,66,99)
+# but if we directly cast it to int, it will be (-111,66,99)
 def mcint(num):
         return int(num)-1 if num < 0 else int(num)
