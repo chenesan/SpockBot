@@ -123,3 +123,6 @@ def mapshort2id(data):
 
 def ByteToHex(byteStr):
 	return ''.join( [ "%02X " % x for x in byteStr ] ).strip()
+
+def mcint(num):
+        return int(num)-1 if num < 0 else int(num)
